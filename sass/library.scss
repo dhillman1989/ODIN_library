@@ -1,0 +1,64 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  text-align: center;
+}
+
+.addNewBook {
+  border-radius: 10px;
+  border: 0;
+  padding: 1rem 1.5rem;
+  color: #000;
+  background-color: rgb(167, 192, 52);
+}
+
+.books {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.book {
+  display: flex;
+  width: 200px;
+  height: 200px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 2rem;
+  border-radius: 2rem;
+  padding: 2rem;
+  background-color: #ddd;
+  box-shadow: 0 10px 10px 5px rgba(0, 0, 0, 0.2);
+  &__title {
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+  &__author {
+    font-size: 1.8rem;
+    font-weight: 300;
+  }
+  &__pages {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  &__read-label {
+    font-size: 1.4rem;
+  }
+  &__deleteButton {
+    margin-top: 2rem;
+    background-color: rgb(186, 40, 40);
+    color: #fff;
+    border-radius: 10px;
+    border: 0;
+    padding: 1rem 1.5rem;
+  }
+
+  &:nth-of-type(even) {
+    background-color: #aaa;
+  }
+}

@@ -22,12 +22,19 @@ function showBooks() {
   const bookList = myLibrary
     .map(
       (b, i) =>
-        `<div>
-        <input type="checkbox" ${
+        `<div class="book">
+        
+      <span class="book__title">${b.title}</span> 
+      <span class="book__author">${b.author}
+        </span>
+        <span class="book__pages">
+        ${b.pages} pages
+        </span>
+          <div>
+        <label class="book__read-label" for="read">I've read this</label><input id="read" type="checkbox" ${
           b.read && "checked"
-        } onclick={toggleRead(${i})}> 
-      ${b.title}, ${b.author} - ${b.pages} pages
-        <button class="deleteButton" onclick={deleteBook(${i})}>x</button>
+        } onclick={toggleRead(${i})}> </div>
+        <button class="book__deleteButton" onclick={deleteBook(${i})}>Delete</button>
         
     </div>`
     )
@@ -63,8 +70,9 @@ function submitNewBook() {
   }
 }
 
+///event listener for NEW BOOK button
 document
-  .querySelector("#addBook")
+  .querySelector("#addNewBook")
   .addEventListener("click", () => submitNewBook());
 
 showBooks();
