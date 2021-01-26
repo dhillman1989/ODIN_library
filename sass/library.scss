@@ -4,6 +4,20 @@ html {
 
 body {
   text-align: center;
+  margin: 0;
+  padding: 0;
+  font-family: arial;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  font-family: arial;
+  color: white;
+  background-color: #000;
+  margin-bottom: 1.5rem;
 }
 
 .addNewBook {
@@ -26,14 +40,17 @@ body {
   width: 200px;
   height: 200px;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
   margin: 2rem;
   border-radius: 2rem;
   padding: 2rem;
-  background-color: #ddd;
+  background-color: rgba(255, 251, 198, 0.904);
   box-shadow: 0 10px 10px 5px rgba(0, 0, 0, 0.2);
+  &--read {
+    background-color: rgb(152, 221, 131);
+  }
   &__title {
     font-size: 1.8rem;
     font-weight: 600;
@@ -56,9 +73,5 @@ body {
     border-radius: 10px;
     border: 0;
     padding: 1rem 1.5rem;
-  }
-
-  &:nth-of-type(even) {
-    background-color: #aaa;
   }
 }

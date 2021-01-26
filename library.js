@@ -6,10 +6,6 @@ function Book(title, author, pages, read = false) {
   this.author = author;
   this.pages = pages;
   this.read = read;
-
-  this.getInfo = function () {
-    return { title, author, pages, read };
-  };
 }
 
 ///ADD BOOK TO LIBRARY
@@ -22,7 +18,7 @@ function showBooks() {
   const bookList = myLibrary
     .map(
       (b, i) =>
-        `<div class="book">
+        `<div class="book ${b.read ? "book--read" : ""}">
         
       <span class="book__title">${b.title}</span> 
       <span class="book__author">${b.author}
@@ -54,6 +50,7 @@ function deleteBook(index) {
 function toggleRead(i) {
   myLibrary[i].read = !myLibrary[i].read;
   localStorage.setItem("library", JSON.stringify(myLibrary));
+  showBooks();
 }
 
 function submitNewBook() {

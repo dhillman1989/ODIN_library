@@ -4,6 +4,26 @@ html {
 
 body {
   text-align: center;
+  margin: 0;
+  padding: 0;
+  font-family: arial;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  font-family: arial;
+  color: white;
+  background-color: #000;
+  margin-bottom: 1.5rem;
 }
 
 .addNewBook {
@@ -38,9 +58,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -48,9 +68,13 @@ body {
   margin: 2rem;
   border-radius: 2rem;
   padding: 2rem;
-  background-color: #ddd;
+  background-color: rgba(255, 251, 198, 0.904);
   -webkit-box-shadow: 0 10px 10px 5px rgba(0, 0, 0, 0.2);
           box-shadow: 0 10px 10px 5px rgba(0, 0, 0, 0.2);
+}
+
+.book--read {
+  background-color: #98dd83;
 }
 
 .book__title {
@@ -79,9 +103,5 @@ body {
   border-radius: 10px;
   border: 0;
   padding: 1rem 1.5rem;
-}
-
-.book:nth-of-type(even) {
-  background-color: #aaa;
 }
 /*# sourceMappingURL=library.css.map */
