@@ -1,4 +1,6 @@
-let myLibrary = JSON.parse(localStorage.getItem("library")) || [];
+let myLibrary = JSON.parse(localStorage.getItem("library")) || [
+  { title: "Example Book", author: "A. Writer", pages: 9999, read: true },
+];
 
 ///BOOK CONSTRUCTOR
 function Book(title, author, pages, read = false) {
